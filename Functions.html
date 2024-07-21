@@ -1,0 +1,88 @@
+<!DOCTYPE hmtl>
+<html>
+  <head>
+    <title>Functions(improving the rock/paper/scissors game(1))</title>
+</head>
+  <body>
+   <!--
+    <script>
+      function function1 () {
+        console.log('hello');
+        console.log(2 + 2);
+      }
+      // calling the function:
+      function1();
+
+      // using paramters to insert value into a function
+      //unlike a return statement that lets us get a value out of a function
+
+      function calculateTax (cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+      calculateTax(2000, 0.2);
+      calculateTax(5000);
+    </script>
+   -->
+
+
+   <p>Rock Paper Scissors</p>
+
+  <button onclick="
+   playGame('ROCK');
+  ">
+    ROCK
+  </button>
+
+  <button onclick="
+  playGame('PAPER')
+  ">
+    PAPER
+  </button>
+
+  <button onclick="
+  playGame('SCISSORS')
+  ">
+    SCISSORS
+  </button>
+
+
+  <script>
+      function playGame (playerMove) {
+        const computerMove = pickComputerMove();
+
+  let result = '';
+  if (playerMove === 'ROCK') {
+    if (computerMove === 'ROCK') { result = 'TIE.';}
+    else if (computerMove === 'PAPER') {result = 'You lOSE.';}
+    else if (computerMove === 'SCISSORS') {result = 'You WIN.';}
+  }
+   else if (playerMove === 'PAPER') {
+    if (computerMove === 'ROCK') { result = 'You WIN.';}
+  else if (computerMove === 'PAPER') {result = 'TIE.';}
+  else if (computerMove === 'SCISSORS') {result = 'You LOSE.';}
+  }
+   else if (playerMove === 'SCISSORS') {
+    if (computerMove === 'ROCK') { result = 'You LOSE.';}
+  else if (computerMove === 'PAPER') {result = 'You WIN.';}
+  else if (computerMove === 'SCISSORS') {result = 'TIE.';}
+  }
+  
+      alert(`You picked ${playerMove}, The computer picked ${computerMove}, ${result}.`);
+      }
+
+      function pickComputerMove () {
+       Math.random();
+       const randomNumber = (Math.random());
+
+  let computerMove = '';
+
+    if (randomNumber >= 0 && randomNumber < 1/3) {computerMove = 'ROCK';}
+  else if (randomNumber >= 1/3 && randomNumber < 2/3) {computerMove = 'PAPER';}
+  else if (randomNumber >= 2/3 && randomNumber < 1) {computerMove = 'SCISSORS';}
+
+      return computerMove;
+    }
+  </script>
+
+  </body>
+</html>

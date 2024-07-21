@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Cart Quantity project</title>
+</head>
+<body>
+  <button onclick="
+    console.log(`cart quantity = ${cartQuantity}`);
+  "> show quantity
+  </button>
+
+  <button
+     onclick="
+     cartQuantity = cartQuantity + 1;
+     console.log(`cart quantity = ${cartQuantity}`);"
+  >
+    add to cart
+  </button>
+
+  <button
+  onclick="
+  cartQuantity = cartQuantity + 2;
+  console.log(`cart quantity = ${cartQuantity}`);"
+  >
+    +2
+  </button>
+
+  <button
+  onclick="
+  cartQuantity = cartQuantity + 3;
+  console.log(`cart quantity = ${cartQuantity}`);"
+  >
+    +3
+  </button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 10;
+  console.log(`cart quantity = ${cartQuantity}`);"
+  >
+    +10
+  </button>
+
+  <button
+  onclick="
+  cartQuantity = 0;
+  console.log(`cart was reset.`);
+  console.log(`cart quantity = ${cartQuantity}`);"
+  >
+    reset cart
+  </button>
+
+
+</body>
+
+<script>
+  let cartQuantity = 5 + 5;
+  console.log(cartQuantity);
+
+  console.log('javascript');
+
+  let calculation = cartQuantity * 2;
+  console.log(calculation);
+
+  const result = cartQuantity + calculation;
+  console.log(result);
+
+  let message = "hello world!"; 
+  console.log(message);
+
+  cartQuantity = 2;
+  console.log(cartQuantity);
+  console.log(cartQuantity - 1);
+
+  cartQuantity = 0;
+  
+</script>
+
+</html>
+
+
